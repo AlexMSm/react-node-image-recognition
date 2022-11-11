@@ -84,6 +84,14 @@ export default function InputImage(props) {
     }
   };
 
+  navigator.getUserMedia(
+    { audio: true, video: true },
+    function (stream) {
+      stream.getTracks().forEach((x) => x.stop());
+    },
+    (err) => console.log(err)
+  );
+
   return (
     <Stack>
       <div>
