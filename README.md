@@ -35,3 +35,5 @@ npm run start
 Frontend app will run on localhost:3000
 
 Click 'capture photo' then 'submit'
+
+.
