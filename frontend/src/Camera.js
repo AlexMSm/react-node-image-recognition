@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useCallback } from "react";
 import Webcam from "react-webcam";
 
 export default function Camera({ imgSrc, setImgSrc, setFileObj }) {
   const webcamRef = React.useRef(null);
 
-  const capture = React.useCallback(() => {
+  const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(() => {
       setImgSrc(imageSrc);
